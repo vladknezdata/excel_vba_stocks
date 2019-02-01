@@ -17,7 +17,7 @@ Sub VbaStock()
         
         lastrow = ActiveSheet.Cells(Rows.Count, 1).End(xlUp).Row  ' number of rows
         
-        opening = Cells(2, 3) ' stock opening value
+        opening = Cells(2, 3) ' the first stock opening value
         j = 1
         For i = 2 To lastrow
             
@@ -55,9 +55,9 @@ Sub VbaStock()
                 Cells(j, 10).Interior.ColorIndex = 3
                 End If
                 
-        ' ===========
+        ' ==========================
         ' Getting the min/max values
-        ' ===========
+        ' ==========================
           
          k = 2
          Min = 0
@@ -80,9 +80,9 @@ Sub VbaStock()
             k = k + 1
             Loop
             
-            ' ============
+            ' =================================================
             ' printing, formating and fitting of the max values
-            ' ============
+            ' =================================================
             
             Range("K2:K" & k).NumberFormat = "0.00%"
             Range("J2:J" & k).NumberFormat = "0.00"
